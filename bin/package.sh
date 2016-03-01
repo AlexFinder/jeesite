@@ -5,14 +5,14 @@
 # Author: ThinkGem@163.com
 #
 echo .
-echo [信息] 清理生成路径。
+echo [信息] 打包工程，生成war包文件。
 echo .
 
 echo .
 
 cd ..
 
-mvn clean
+mvn clean package -Dmaven.test.skip=true
 
 cd bin
 

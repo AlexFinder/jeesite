@@ -4,16 +4,19 @@
 #
 # Author: ThinkGem@163.com
 #
+
+title $PWD
 echo .
-echo [信息] 清理生成路径。
+echo [信息] 使用Tomcat6插件运行工程。
 echo .
 
 echo .
 
 cd ..
 
-mvn clean
+export MAVEN_OPTS=$MAVEN_OPTS -Xms256m -Xmx512m -XX:PermSize=128m -XX:MaxPermSize=256m
+
+mvn tomcat6:run
 
 cd bin
-
 
